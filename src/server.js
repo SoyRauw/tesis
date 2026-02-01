@@ -12,6 +12,7 @@ import { router as recipeIngredientsRouter } from './routes/recipe_ingredients.j
 import { router as usersRouter } from './routes/users.js';
 import { router as userFamilyRouter } from './routes/user_family.js';
 import { errorHandler } from './utils/errorHandler.js';
+import { router as aiRecipesRouter } from './routes/ai_recipes.js';
 
 dotenv.config();
 
@@ -49,6 +50,8 @@ app.use('/recipe_ingredients', recipeIngredientsRouter); // alias with underscor
 app.use('/users', usersRouter);
 app.use('/user-family', userFamilyRouter);
 app.use('/user_family', userFamilyRouter); // alias with underscore
+app.use('/families', familiesRouter);
+app.use('/ai', aiRecipesRouter);
 
 app.use(errorHandler);
 
